@@ -1,0 +1,529 @@
+
+/*
+ * ZoneMinder Base Stylesheet, $Date$, $Revision$
+ * Copyright (C) 2001-2008 Philip Coombes
+ * 
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */ 
+
+/*
+ * Primary look and feel styles
+ */
+
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: #333333;
+    font-weight: normal;
+}
+
+h1 {
+    font-family: inherit;
+    font-size: 120%;
+    color: #000066;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-family: inherit;
+    font-size: 110%;
+    color: #000066;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: inherit;
+    font-size: 100%;
+    color: #016A9d;
+    font-weight: bold;
+}
+
+h4 {
+    font-family: inherit;
+    font-size: 100%;
+    color: #016A9d;
+}
+
+p {
+    font-family: inherit;
+    font-size: 100%;
+    color: #333333;
+    font-weight: normal;
+}
+
+
+a:link,
+a:visited {
+    color: #7f7fb2;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #666699;
+    text-decoration: underline;
+}
+
+th, th a {
+    font-weight: bold;
+    color: #016A9d;
+}
+
+input,textarea,select,button {
+    border: 1px #7f7fb2 solid;
+    font-family: inherit;
+    font-size: 100%;
+    color: #333333;
+}
+
+input[type=text], input[type=password], textarea {
+    padding: 1px;
+}
+
+input.noborder {
+    border: 0;
+}
+
+
+img {
+  display: inline-block;
+}
+img.normal {
+    border: white solid 1px;
+}
+
+img.alarm {
+    border: red solid 1px;
+}
+
+hr {
+    height: 1px;
+    width: 100%;
+    border: 0;
+    color: #7f7fb2;
+    background-color: #7f7fb2;
+}
+
+/*
+ * Tabbed headings
+ */
+ul.tabList {
+    float: left;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 -4px 0;
+    white-space: nowrap;
+    text-align: left;
+}
+
+ul.tabList li {
+    float: left;
+    border: 1px solid;
+    color: #333333;
+    border: #7f7fb2 solid 1px;
+    border-bottom-width: 0;
+    margin: 0 2px 0 0;
+    background: #dddddd;
+    text-align: center;
+    padding: 3px 4px;
+}
+
+ul.tabList li a {
+    text-decoration: none;
+}
+
+ul.tabList li:hover {
+    background-color: #eeeeee;
+}
+
+ul.tabList li.active {
+    background-color: #ffffff;
+    border-bottom: #7f7fb2 dotted 1px;
+}
+
+ul.tabList li.active a {
+    font-weight: bold;
+}
+
+/*
+ * Major league table for multiple inputs or presentation
+ */
+
+#content table.major {
+    margin: 4px auto;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#content table.major tr.highlight {
+    background-color: #eeeeee;
+}
+
+#content table.major thead tr th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    vertical-align: middle;
+}
+
+#content table.major tfoot td {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    vertical-align: middle;
+}
+
+#content table.major th {
+    vertical-align: bottom;
+}
+
+#content table.major td {
+    vertical-align: middle;
+}
+
+#content table.major th[scope=row] {
+    padding: 4px 3px 3px;
+    vertical-align: top;
+}
+
+#content table.major .colMark, #content table.major .colSelect {
+    text-align: center;
+}
+/*
+ * Lesser table for very simple forms
+ */
+
+#content table.minor {
+    width: 280px;
+    margin: 0 auto;
+}
+
+#content table.minor td {
+    padding: 4px;
+}
+
+#content table.minor .colLeft {
+    width: 50%;
+    text-align: right;
+}
+
+#content table.minor .colRight {
+    width: 50%;
+    text-align: left;
+}
+
+#content table.minor input[type=submit]
+{
+    margin-top: 8px;
+    padding: 0 2px;
+    font-size: 120%;
+}
+
+#content table > tbody > tr:hover
+{
+    background-color: #EEE;
+}
+
+.overlay {
+    font-size: 11px;
+}
+
+.overlay fieldset {
+    background-color: #f8f8f8;
+}
+
+.validation-advice {
+    padding: 4px;
+    color: #dc143c;
+}
+
+fieldset {
+    border: 1px solid black;
+    padding: 4px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+fieldset > legend {
+    padding: 0 2px;
+}
+
+/*
+ * Behavior classes
+ */
+.alarm, .errorText {
+    color: #dc143c;
+}
+
+.alert, .warnText {
+    color: #ff8c00;
+}
+
+.ok, .infoText {
+    color: #688e23;
+}
+
+.fakelink {
+    color: #7f7fb2;
+    cursor: pointer;
+}
+
+.fakelink:hover {
+    color: #336699;
+    text-decoration: none;
+}
+
+/*
+ * Generic useful classes, especially with mootools
+ */
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+div.clear {
+    clear: both;
+}
+
+/*
+.table-th-sort {
+    font-style:italic;
+}
+
+td.table-td-sort {
+    font-style:italic;
+}
+*/
+
+th.table-th-sort {
+    margin-right: 12px;
+}
+
+th.table-th-sort span.table-th-sort-span {
+    float: right;
+    width: 12px;
+    height: 12px;
+    background: url("/skins/classic/graphics/arrow-s-u.png") no-repeat 0 0;
+}
+
+th.table-th-sort-rev span.table-th-sort-span {
+    float: right;
+    width: 12px;
+    height: 12px;
+    background: url("/skins/classic/graphics/arrow-s-d.png") no-repeat 0 0;
+}
+
+.table-tr-odd {
+    background-color: #f8f8f8;
+}
+
+/*
+ * Primary layout styles
+ */
+
+#page {
+    width: 100%;
+}
+
+#header {
+    width: 100%;
+    margin: 0 auto 4px auto;
+    line-height: 1;
+    text-align: left;
+    padding: 3px 0;
+    border-bottom: 1px solid #555555;
+}
+
+#header h2 {
+    left: 0;
+}
+
+#header h2.floating {
+    float: left;
+}
+
+#headerControl {
+    text-align: center;
+    margin: 0 auto;
+}
+
+#headerButtons {
+    float: right;
+}
+
+#headerButtons input {
+    margin-left: 4px;
+}
+
+#content {
+    width: 96%;
+    margin: 0 auto 8px auto;
+    line-height: 130%;
+    text-align: center;
+}
+
+#content p {
+    margin-top: 4px;
+}
+
+#content p.textblock {
+    text-align: justify;
+    padding: 4px;
+}
+
+#content p.textblock br {
+    margin-bottom: 8px;
+}
+
+/*
+#contentDiv {
+    margin: 0 auto 8px;
+    line-height: 140%;
+    text-align: center;
+}
+*/
+
+#content > input[type=submit],
+#content > input[type=button],
+#content > button,
+#content > .btn-primary {
+    margin-top: 8px;
+}
+
+#content table input[type=submit],
+#content table input[type=button],
+#content table button,
+#content table .btn-primary {
+    margin-top: 0;
+}
+
+#contentButtons {
+    margin-top: 8px;
+    float: right;
+}
+
+#contentButtons button,
+#contentButtons input {
+    margin-left: 8px;
+    margin-bottom: 4px;
+}
+
+#footer {
+    border-top: 1px solid #e7e7e7;
+    margin: 32px 0;
+    padding: 8px;
+}
+
+.nav.nav-pills.nav-stacked.col-md-2 {
+}
+
+.nav.nav-pills.nav-stacked.col-md-2 > li > a {
+}
+
+#options {
+	font-size:90%;
+}
+
+#options .help-block {
+	margin-top: 0;
+}
+
+#options .form-group {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+.navbar{
+	margin-bottom: 0 !important;
+	border-radius: 0;
+	color: #03A9F4 !important;
+}
+
+.navbar-brand {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.container-fluid {
+  position: relative;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+    border-right: 1px solid #eeeeee;
+}
+
+.sidebar ul {
+margin-right: 0px;
+margin-bottom: 20px;
+margin-left: 0px;
+}
+
+.nav-pills > li > a {
+	border-radius: 0;
+}
+
+button,
+input[type=button],
+input[type=submit],
+.btn-primary,
+.btn-primary:link {
+  padding: 1px 6px;
+  background-color: #eeeeee;
+  color: #333333;
+  border: 1px solid #7f7fb2;
+  font-weight: 200;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.btn-primary:hover {
+  background-color: #e1e1e1;
+  color: #000000;
+}
+
+button:disabled,
+input[disabled],
+input[type=button]:disabled,
+input[type=submit]:disabled,
+.btn-primary:disabled {
+    color: #888888;
+  /*
+  background-color: #aaaaaa;
+  */
+  border-color: #bbbbbb;
+}

@@ -1,0 +1,33 @@
+
+#dvrControls input[disabled] {
+    color: #aaaaaa;
+}
+
+#dvrControls input.active {
+    border: 1px solid blue;
+}
+
+#dvrControls input.inactive {
+    border: 1px solid green;
+}
+
+#dvrControls input.unavail {
+    border: 1px solid red;
+}
+
+span.alarm {
+    color: #DC143C;
+}
+
+span.alert {
+    color: #FF8C00;
+}
+
+#eventList tr.recent {
+    background-color: #B0E0E6;
+}
+
+#eventList tr.highlight {
+    background-color: #DCDCDC;
+}
+
